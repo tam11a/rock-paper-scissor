@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Rock Paper Scissors</title>
+    <link rel="shortcut icon" href="tic-tac-toe.png" type="image/png">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <div class="container grid">
+        <div class="flex-col">
+            <div class="t3-icon splash-icon"></div>
+            <h1>Rock Paper Scissors</h1>
+        </div>
+        <button class="primary-btn" onclick="document.querySelector('.login-page').classList.add('show')">Get Started</button>
+    </div>
+    <div class="container reg-page grid login-page">
+        <div class="flex-col">
+            <i class="material-icons clsreg" onclick="document.querySelector('.login-page').classList.remove('show')">close</i>
+            <input type="text" class="primary-input sx" placeholder="Username">
+            <input type="password" class="primary-input" placeholder="Password">
+            <p class="reg-warn">Invalid Username or Password!!</p>
+        </div>
+        <div>
+            <a href="menu.html"><button class="primary-btn">Sign In</button></a>
+            <button class="primary-btn" onclick="document.querySelector('.login-page').classList.remove('show'); document.querySelector('.create-account-page').classList.add('show');">Create New Account</button>
+        </div>
+    </div>
+    <div class="container reg-page create-account-page grid">
+        <div class="flex-col">
+            <i class="material-icons clsreg" onclick="document.querySelector('.create-account-page').classList.remove('show')">close</i>
+            <input type="text" class="primary-input sx" placeholder="Username">
+            <input type="password" class="primary-input" placeholder="Password">
+            <input type="password" class="primary-input" placeholder="Confirm Password">
+            <p class="reg-warn">The Username is Taken!!</p>
+        </div>
+        <div>
+            <a href="menu.html"><button class="primary-btn">Sign Up</button></a>
+            <button class="primary-btn" onclick="document.querySelector('.create-account-page').classList.remove('show'); document.querySelector('.login-page').classList.add('show'); ">Already Have An Account</button>
+        </div>
+    </div>
+</body>
+</html>
